@@ -1,0 +1,28 @@
+
+---
+- hosts: leaf
+  user: root
+  roles:
+    - common
+    - interfaces
+  handlers:
+    - include: handles/main.yml
+
+  # - name: Assign IP address to loopback
+  #   command: sudo ip addr add {{ loopback_ip }} dev lo
+  #   when: hostvars[inventory_hostname]['ansible_lo']['ipv4_secondaries'] is not defined
+
+#  - name: Add source to interfaces file
+#    lineinfile: dest=/etc/network/interfaces insertafter=EOF line="source /etc/network/interfaces.d/*"
+#
+#  - name: Apply Loopback IP
+#    cl_interface: name=lo ipv4={{loopback_ip}}
+#    notify: restart networking
+#
+#  - name: Host IP
+#    cl_interface: name=swp1 ipv4={{link_ip}}
+#    notify: restart networking
+#
+#  handlers:
+#    - name: restart networking
+#      service: name=networking state=reloaded

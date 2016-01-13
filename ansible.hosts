@@ -1,0 +1,12 @@
+[me]
+localhost
+
+[spines]
+spine[1]
+
+[leafs]
+leaf[1:2]
+
+[network:children]
+leafs
+spines
