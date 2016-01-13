@@ -1,11 +1,11 @@
 interfaces:
-	leaf1:
- 		loopback: "192.168.1.1"
- 		swp:
- 			swp1:
- 				address: "10.1.1.1/30"
- 	leaf2:
- 		loopback: "192.168.1.2"
- 		swp:
- 			swp1:
- 				address: "10.1.1.2/30"
+  leaf1:
+    loopback: "192.168.3.1"
+    swps:
+      swp1:
+        address: "10.1.1.1/30"
+  leaf2:
+    loopback: "192.168.3.2"
+    swps:
+      swp1:
+        address: "10.1.1.2/30"

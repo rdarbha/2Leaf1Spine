@@ -1,8 +1,7 @@
-
 auto lo
 iface lo inet loopback
-	address {{ interfaces.ansible_hostname.loopback }}/32
+	address {{ interfaces[ansible_hostname].loopback }}/32
 
 auto swp1
 iface swp1 address static
-	address {{ interfaces.ansible_hostname.swp.swp1.address }}
+	address {{ interfaces[ansible_hostname].swps.swp1.address }}

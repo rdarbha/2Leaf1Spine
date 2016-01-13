@@ -1,12 +1,13 @@
 
 ---
-- hosts: leaf
+- hosts: all
   user: root
+  sudo: yes
   roles:
     - common
     - interfaces
   handlers:
-    - include: handles/main.yml
+    - include: handlers/main.yml
 
   # - name: Assign IP address to loopback
   #   command: sudo ip addr add {{ loopback_ip }} dev lo
