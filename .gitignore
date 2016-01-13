@@ -1,3 +1,8 @@
 # Compressed Files #
 ####################
 *.zip
+
+# Vagrant Files #
+#################
+.vagrant
+.vagrant?
